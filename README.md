@@ -1,2 +1,2 @@
 # HackerRank
-# This repository is my solutions in HackerRank.
+This repository is my solution in HackerRank.
