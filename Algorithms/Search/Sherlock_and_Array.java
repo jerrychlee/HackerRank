@@ -8,23 +8,20 @@ public class Solution {
 
     static String solve(int[] a){
         // Complete this function
-        int i = 0;
-        int j = a.length-1;
-        int sumL = a[i];
-        int sumR = a[j];
-        while(i!=j){
-            if(sumL>sumR){
-                j--;
-                sumR+=a[j];
-            }else{
-                i++;
-                sumL+=a[i];
-            }
+        if(a==null||a.length==0)
+            return "NO";
+        
+        int total = 0;
+        for(int i=0; i<a.length; i++){
+            total+= a[i];    
         }
-        
-        if(sumL==sumR)
-            return "YES";
-        
+        int sum=0;
+        for(int i=0; i<a.length; i++){
+            if(i!=0)
+                sum+=a[i-1];
+            if((total-sum-a[i])==sum)
+                return "YES";
+        }
         return "NO";
     }
 
