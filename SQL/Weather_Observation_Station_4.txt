@@ -9,7 +9,9 @@ Station.jpg
 where LAT_N is the northern latitude and LONG_W is the western longitude.
 
 =========================================================
+
 /*
 Enter your query here.
 */
+
 SELECT count(CITY) - count(distinct CITY) FROM STATION;
